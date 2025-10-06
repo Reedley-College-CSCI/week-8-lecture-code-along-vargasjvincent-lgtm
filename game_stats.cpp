@@ -21,6 +21,31 @@ int main() {
     // display memory usage of array
 
     cout << "Array memory: #" << sizeof(yards) << " bytes" << endl;
+    cout << "All yards: ";
+    for (int val : yards) {
+        cout << val << " ";
+    }
+    cout << endl;
+    double total = 0;
+    for (int val : yards) {
+        total += val;
+    }
+    cout << "Total yards: " << total << endl;
+    cout << "Average yards: " << total / SIZE << endl;
+
+    // Find longest drive in yards
+    int maxYards = yards[0];
+    for (int i = 1; i < SIZE; i++) {
+        if (yards[1] > maxYards)
+            maxYards = yards[i];
+    }
+    cout << "Longest drive: " << maxYards << " yards" << endl;
+
+    int plays[SIZE] = { 11, 18, 10, 12, 5, 4, 6, 7, 5, 6 };
+    for (int i = 0; i < SIZE; i++) {
+        cout << "Drive " << i + 1 << ": " << plays[i] << " plays, "
+            << yards[i] << " yards" << endl;
+    }
 
    
 
